@@ -83,8 +83,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
-    <AndroidResource Include="Resources\drawable\iconAbout.png" />
-    <AndroidResource Include="Resources\drawable\iconFeed.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cyclone\Cyclone.csproj">
@@ -93,76 +91,43 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\coldTemperatures.png" />
+    <AndroidResource Include="Resources\drawable\scatteredCloudsDay.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\drizzle.png" />
+    <AndroidResource Include="Resources\drawable\scatteredCloudsNight.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\dust.png" />
+    <AndroidResource Include="Resources\drawable\brokenCloudsDay.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\hail.png" />
+    <AndroidResource Include="Resources\drawable\brokenCloudsNight.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\haze.png" />
+    <AndroidResource Include="Resources\drawable\showerRain.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\heavySnow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\heavyRain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\hotTemperatures.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mist.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mixedRain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\partlyCloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\scatteredSnow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\snow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\sunrise.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\sunset.png" />
+    <AndroidResource Include="Resources\drawable\rain.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\thunderstorm.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\tornado.png" />
+    <AndroidResource Include="Resources\drawable\snow.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\wind.png" />
+    <AndroidResource Include="Resources\drawable\fog.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\blowingSnow.png" />
+    <AndroidResource Include="Resources\drawable\day.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\clearDay.png" />
+    <AndroidResource Include="Resources\drawable\night.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\clearNight.png" />
+    <AndroidResource Include="Resources\drawable\fewCloudsDay.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\cloud.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\cloudyDay.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\cloudyNight.png" />
+    <AndroidResource Include="Resources\drawable\fewCloudsNight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
