@@ -9,10 +9,10 @@ namespace Cyclone.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            Title = "Current Location";
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart")); // provides the link when button is clicked
         }
 
-        public ICommand OpenWebCommand { get; }
+        public ICommand OpenWebCommand { get; } // used for the button, when clicked it opens the link above
     }
 }
