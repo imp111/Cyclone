@@ -588,3 +588,4 @@ D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\day.png
 D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\night.png
 D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\fewcloudsday.png
 D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\fewcloudsnight.png
+D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\android\assets\Newtonsoft.Json.dll
