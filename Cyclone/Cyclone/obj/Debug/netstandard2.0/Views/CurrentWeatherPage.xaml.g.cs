@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Cyclone.Views.AboutPage.xaml", "Views/AboutPage.xaml", typeof(global::Cyclone.Views.AboutPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Cyclone.Views.CurrentWeatherPage.xaml", "Views/CurrentWeatherPage.xaml", typeof(global::Cyclone.Views.CurrentWeatherPage))]
 
 namespace Cyclone.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\AboutPage.xaml")]
-    public partial class AboutPage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\CurrentWeatherPage.xaml")]
+    public partial class CurrentWeatherPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Image backgroundImage;
@@ -54,7 +54,7 @@ namespace Cyclone.Views {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AboutPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CurrentWeatherPage));
             backgroundImage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "backgroundImage");
             weatherConditionImage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "weatherConditionImage");
             weatherConditionText = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "weatherConditionText");

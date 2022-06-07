@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Cyclone.Views.AboutPage"
+             x:Class="Cyclone.Views.CurrentWeatherPage"
              xmlns:vm="clr-namespace:Cyclone.ViewModels"
              Title="{Binding Title}">
-    
+
     <ContentPage.BindingContext>
-        <vm:AboutViewModel />
+        <vm:CurrentLocationViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
