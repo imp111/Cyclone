@@ -11,7 +11,7 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="Accent">#383A44</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -25,14 +25,16 @@
         </Grid.RowDefinitions>
 
         <Grid RowSpacing="0">
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <BoxView Grid.RowSpan="2" BackgroundColor="#7585BA" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+            <BoxView Grid.RowSpan="2" BackgroundColor="#383A44" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></BoxView>
             <Image x:Name="backgroundImage" Aspect="AspectFill" Grid.RowSpan="2" Source="bgLondon.jpg" Opacity="0.5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
             <Image Aspect="AspectFill" Grid.RowSpan="2" Source="bgDimm.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
+
             <Grid Grid.Row="1">
 
                 <StackLayout Spacing="20">
@@ -56,8 +58,6 @@
                             <Label x:Name="weatherTemperature" Text="" TextColor="White" FontSize="100" HorizontalOptions="Center"></Label>
                             <Label x:Name="weatherTemperatureUnitSign" Text="" TextColor="White" FontSize="100" HorizontalOptions="Center"></Label>
                         </StackLayout>
-
-                        <Label x:Name="weatherTemperatureUnit" Text="" Margin="0, -30, 0, 0" TextColor="White" FontSize="20" HorizontalOptions="Center"></Label>
                     </StackLayout>
 
                     <Grid WidthRequest="300" ColumnSpacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
@@ -114,7 +114,19 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Grid BackgroundColor="#7585BC" Opacity="0.4">
+            <Grid BackgroundColor="#383A44" Opacity="0.4">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label x:Name ="firstDay" Text="" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
+                    <Label x:Name="firstDayDate" Margin="0, -5, 0, 0" Text="" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
+                    <Image x:Name="firstDayImg" Source="" Margin="0.20" WidthRequest="50" HeightRequest="30" />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5">
+                        <Label x:Name="firstDayTemperature" Text="" TextColor="White" FontSize="25" ></Label>
+                        <Label x:Name="firstDayTemperatureUnit"  Text="" TextColor="White" FontSize="25" ></Label>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+
+            <Grid BackgroundColor="#383A44" Opacity="0.6" Grid.Column="1">
                 <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                     <Label Text="Sunday" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
                     <Label Margin="0, -5, 0, 0" Text="Date" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
@@ -126,7 +138,7 @@
                 </StackLayout>
             </Grid>
 
-            <Grid BackgroundColor="#7585BC" Opacity="0.6" Grid.Column="1">
+            <Grid BackgroundColor="#383A44" Opacity="0.8" Grid.Column="2">
                 <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                     <Label Text="Sunday" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
                     <Label Margin="0, -5, 0, 0" Text="Date" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
@@ -138,19 +150,7 @@
                 </StackLayout>
             </Grid>
 
-            <Grid BackgroundColor="#7585BC" Opacity="0.8" Grid.Column="2">
-                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                    <Label Text="Sunday" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
-                    <Label Margin="0, -5, 0, 0" Text="Date" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
-                    <Image Source="clearDay.png" Margin="0.20" WidthRequest="50" HeightRequest="30" />
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5">
-                        <Label Text="25" TextColor="White" FontSize="25" ></Label>
-                        <Label Text="°" TextColor="White" FontSize="25" ></Label>
-                    </StackLayout>
-                </StackLayout>
-            </Grid>
-
-            <Grid BackgroundColor="#7585BC" Opacity="1" Grid.Column="3">
+            <Grid BackgroundColor="#383A44" Opacity="1" Grid.Column="3">
                 <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                     <Label Text="Sunday" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
                     <Label Margin="0, -5, 0, 0" Text="Date" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />

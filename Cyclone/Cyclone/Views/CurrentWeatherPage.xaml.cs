@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Newtonsoft.Json;
 using Cyclone.Helper;
 using Cyclone.Models;
+using System.Collections.Generic;
 
 namespace Cyclone.Views
 {
@@ -12,14 +13,16 @@ namespace Cyclone.Views
         {
             InitializeComponent();
             ApiWeatherResponse();
+            //ForecastPrediction();
         }
 
-        private string Location = "Los Angeles";
-        private string Unit = "metric"; //imperial and metric
+        private string Location = "Stara Zagora";
+        private string ApiKey = "0668feb2839853a4357b33fa849d4cc5";
+        private string Unit = "imperial"; //imperial and metric
 
         private async void ApiWeatherResponse()
         {
-            var url = $"https://api.openweathermap.org/data/2.5/weather?q={Location}&appid=0668feb2839853a4357b33fa849d4cc5&units={Unit}";
+            var url = $"https://api.openweathermap.org/data/2.5/weather?q={Location}&appid={ApiKey}&units={Unit}";
             var result = await ApiObj.Get(url);
 
             if (result.Success)
@@ -116,24 +119,70 @@ namespace Cyclone.Views
 
                     var date = new DateTime().ToUniversalTime().AddSeconds(weatherInfo.dt);
 
-                    weatherDate.Text = date.ToString("dddd, MM, dd").ToUpper();
+                    weatherDate.Text = date.ToString("dddd, dd/MM/yyyy").ToUpper();
                     weatherTemperature.Text = $"{weatherInfo.main.temp}";
 
                     if (Unit == "metric")
                     {
-                        weatherTemperatureUnitSign.Text = "°";
-                        weatherTemperatureUnit.Text = $"Celcius";
+                        weatherTemperatureUnitSign.Text = $"°C";
                     }
                     else if (Unit == "imperial")
                     {
-                        weatherTemperatureUnitSign.Text = "F";
-                        weatherTemperatureUnit.Text = $"Fahrenheit";
+                        weatherTemperatureUnitSign.Text = $"°F";
                     }
 
                     weatherHumidityPercentage.Text = $"{weatherInfo.main.humidity}%";
                     weatherWindSpeed.Text = $"{weatherInfo.wind.speed} m/s";
                     weatherPressure.Text = $"{weatherInfo.main.pressure} hpa";
                     weatherCloudinessPercentage.Text = $"{weatherInfo.clouds.all}%";
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            else
+            {
+                await DisplayAlert("Weather Info", "No Weather information found", "OK");
+            }
+        }
+
+        public async void ForecastPrediction()
+        {
+            var url = $"https://api.openweathermap.org/data/2.5/forecast?q={Location}&appid={ApiKey}&units={Unit}";
+            var result = await ApiObj.Get(url);
+
+            if (result.Success)
+            {
+                try
+                {
+                    var forecastInfo = JsonConvert.DeserializeObject<Forecast>(result.Response);
+                    List<List> items = new List<List>();
+
+                    foreach (var item in forecastInfo.list)
+                    {
+                        var currentDate = DateTime.Parse(item.dt_txt);
+
+                        if (currentDate > DateTime.Now && currentDate.Hour == 0 && currentDate.Minute == 0 && currentDate.Second == 0)
+                        {
+                            items.Add(item);
+                        }
+
+                        firstDay.Text = DateTime.Parse(items[0].dt_txt).ToString("dddd");
+                        firstDayDate.Text = DateTime.Parse(items[0].dt_txt).ToString("dddd/MM/yyyy");
+                        firstDayTemperature.Text = items[0].main.temp.ToString();
+
+                        if (Unit == "metric")
+                        {
+                            firstDayTemperatureUnit.Text = $"°C";
+                        }
+                        else if (Unit == "imperial")
+                        {
+                            firstDayTemperatureUnit.Text = $"°F";
+                        }
+                        
+                        //firstDayImg.Source = ;
+                    }
                 }
                 catch (Exception)
                 {
