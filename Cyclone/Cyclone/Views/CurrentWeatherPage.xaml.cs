@@ -147,7 +147,7 @@ namespace Cyclone.Views
             }
         }
 
-        //public async void ForecastPrediction()
+        //public async void Forecast()
         //{
         //    var url = $"https://api.openweathermap.org/data/2.5/forecast?q={Location}&appid={ApiKey}&units={Unit}";
         //    var result = await ApiObj.Get(url);
@@ -180,7 +180,7 @@ namespace Cyclone.Views
         //                {
         //                    firstDayTemperatureUnit.Text = $"°F";
         //                }
-                        
+
         //                //firstDayImg.Source = ;
         //            }
         //        }
