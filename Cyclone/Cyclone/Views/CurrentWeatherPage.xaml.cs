@@ -147,52 +147,52 @@ namespace Cyclone.Views
             }
         }
 
-        public async void ForecastPrediction()
-        {
-            var url = $"https://api.openweathermap.org/data/2.5/forecast?q={Location}&appid={ApiKey}&units={Unit}";
-            var result = await ApiObj.Get(url);
+        //public async void ForecastPrediction()
+        //{
+        //    var url = $"https://api.openweathermap.org/data/2.5/forecast?q={Location}&appid={ApiKey}&units={Unit}";
+        //    var result = await ApiObj.Get(url);
 
-            if (result.Success)
-            {
-                try
-                {
-                    var forecastInfo = JsonConvert.DeserializeObject<Forecast>(result.Response);
-                    List<List> items = new List<List>();
+        //    if (result.Success)
+        //    {
+        //        try
+        //        {
+        //            var forecastInfo = JsonConvert.DeserializeObject<Forecast>(result.Response);
+        //            List<List> items = new List<List>();
 
-                    foreach (var item in forecastInfo.list)
-                    {
-                        var currentDate = DateTime.Parse(item.dt_txt);
+        //            foreach (var item in forecastInfo.list)
+        //            {
+        //                var currentDate = DateTime.Parse(item.dt_txt);
 
-                        if (currentDate > DateTime.Now && currentDate.Hour == 0 && currentDate.Minute == 0 && currentDate.Second == 0)
-                        {
-                            items.Add(item);
-                        }
+        //                if (currentDate > DateTime.Now && currentDate.Hour == 0 && currentDate.Minute == 0 && currentDate.Second == 0)
+        //                {
+        //                    items.Add(item);
+        //                }
 
-                        firstDay.Text = DateTime.Parse(items[0].dt_txt).ToString("dddd");
-                        firstDayDate.Text = DateTime.Parse(items[0].dt_txt).ToString("dddd/MM/yyyy");
-                        firstDayTemperature.Text = items[0].main.temp.ToString();
+        //                firstDay.Text = DateTime.Parse(items[0].dt_txt).ToString("dddd");
+        //                firstDayDate.Text = DateTime.Parse(items[0].dt_txt).ToString("dddd/MM/yyyy");
+        //                firstDayTemperature.Text = items[0].main.temp.ToString();
 
-                        if (Unit == "metric")
-                        {
-                            firstDayTemperatureUnit.Text = $"°C";
-                        }
-                        else if (Unit == "imperial")
-                        {
-                            firstDayTemperatureUnit.Text = $"°F";
-                        }
+        //                if (Unit == "metric")
+        //                {
+        //                    firstDayTemperatureUnit.Text = $"°C";
+        //                }
+        //                else if (Unit == "imperial")
+        //                {
+        //                    firstDayTemperatureUnit.Text = $"°F";
+        //                }
                         
-                        //firstDayImg.Source = ;
-                    }
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-            }
-            else
-            {
-                await DisplayAlert("Weather Info", "No Weather information found", "OK");
-            }
-        }
+        //                //firstDayImg.Source = ;
+        //            }
+        //        }
+        //        catch (Exception)
+        //        {
+        //            throw;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        await DisplayAlert("Weather Info", "No Weather information found", "OK");
+        //    }
+        //}
     }
 }

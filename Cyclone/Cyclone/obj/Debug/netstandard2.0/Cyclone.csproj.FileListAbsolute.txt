@@ -18,3 +18,4 @@ D:\Projects\Cyclone\Cyclone\Cyclone\obj\Debug\netstandard2.0\Cyclone.dll
 D:\Projects\Cyclone\Cyclone\Cyclone\obj\Debug\netstandard2.0\ref\Cyclone.dll
 D:\Projects\Cyclone\Cyclone\Cyclone\obj\Debug\netstandard2.0\Cyclone.pdb
 D:\Projects\Cyclone\Cyclone\Cyclone\obj\Debug\netstandard2.0\Views\CurrentWeatherPage.xaml.g.cs
+D:\Projects\Cyclone\Cyclone\Cyclone\obj\Debug\netstandard2.0\Views\Forecast.xaml.g.cs

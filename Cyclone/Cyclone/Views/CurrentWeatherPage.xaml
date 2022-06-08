@@ -104,7 +104,8 @@
                 </StackLayout>
             </Grid>
         </Grid>
-
+        
+        <!--
         <Grid Grid.Row="1" HeightRequest="170" ColumnSpacing="0">
 
             <Grid.ColumnDefinitions>
@@ -161,6 +162,6 @@
                     </StackLayout>
                 </StackLayout>
             </Grid>
-        </Grid>
+        </Grid> -->
     </Grid>
 </ContentPage>

@@ -596,3 +596,7 @@ D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\cloud.png
 D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\bglondon.jpg
 D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\bgdimm.png
 D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\bgfrance.jpg
+D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\cyclonelogo.png
+D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\weatherforecast.png
+D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\weather.png
+D:\Projects\Cyclone\Cyclone\Cyclone.Android\obj\Debug\110\res\drawable\location.png
