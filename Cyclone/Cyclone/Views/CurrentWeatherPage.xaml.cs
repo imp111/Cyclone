@@ -15,7 +15,7 @@ namespace Cyclone.Views
             ApiWeatherResponse();
         }
 
-        internal string Location = "Radnevo";
+        internal string Location = "Stara Zagora";
         internal string ApiKey = "0668feb2839853a4357b33fa849d4cc5";
         internal string Unit = "metric"; //imperial and metric
 
