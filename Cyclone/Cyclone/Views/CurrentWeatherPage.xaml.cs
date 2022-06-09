@@ -37,7 +37,7 @@ namespace Cyclone.Views
                     var date = new DateTime().ToUniversalTime().AddSeconds(weatherInfo.dt);
 
                     weatherDate.Text = date.ToString("dddd, dd/MM/yyyy").ToUpper();
-                    weatherTemperature.Text = $"{weatherInfo.main.temp}";
+                    weatherTemperature.Text = $"{Math.Round(weatherInfo.main.temp)}";
 
                     if (Unit == "metric")
                     {

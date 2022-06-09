@@ -59,23 +59,23 @@ namespace Cyclone.Views
 
                     firstDay.Text = DateTime.Parse(items[0].dt_txt).ToString("dddd");
                     firstDayDate.Text = DateTime.Parse(items[0].dt_txt).ToString("dd/MM/yyyy");
-                    firstDayTemperature.Text = items[0].main.temp_max.ToString();
-                    firstDayImg.Source = $"w{items[0].weather[0].icon}";
+                    firstDayTemperature.Text = Math.Round(items[0].main.temp_max).ToString();
+                    firstDayImg.Source = $"w{items[0].weather[0].icon}.png";
 
                     secondDay.Text = DateTime.Parse(items[1].dt_txt).ToString("dddd");
                     secondDayDate.Text = DateTime.Parse(items[1].dt_txt).ToString("dd/MM/yyyy");
-                    secondDayTemperature.Text = items[1].main.temp_max.ToString();
-                    secondDayImg.Source = $"w{items[1].weather[0].icon}";
+                    secondDayTemperature.Text = Math.Round(items[1].main.temp_max).ToString();
+                    secondDayImg.Source = $"w{items[1].weather[0].icon}.png";
 
                     thirdDay.Text = DateTime.Parse(items[2].dt_txt).ToString("dddd");
                     thirdDayDate.Text = DateTime.Parse(items[2].dt_txt).ToString("dd/MM/yyyy");
-                    thirdDayTemperature.Text = items[2].main.temp_max.ToString();
-                    thirdDayImg.Source = $"w{items[2].weather[0].icon}";
+                    thirdDayTemperature.Text = Math.Round(items[2].main.temp_max).ToString();
+                    thirdDayImg.Source = $"w{items[2].weather[0].icon}.png";
 
                     fourthDay.Text = DateTime.Parse(items[3].dt_txt).ToString("dddd");
                     fourthDayDate.Text = DateTime.Parse(items[3].dt_txt).ToString("dd/MM/yyyy");
-                    fourthDayTemperature.Text = items[3].main.temp_max.ToString();
-                    fourthDayImg.Source = $"w{items[3].weather[0].icon}";
+                    fourthDayTemperature.Text = Math.Round(items[3].main.temp_max).ToString();
+                    fourthDayImg.Source = $"w{items[3].weather[0].icon}.png";
                 }
                 catch (Exception)
                 {

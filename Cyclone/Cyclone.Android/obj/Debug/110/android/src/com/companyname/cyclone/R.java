@@ -6542,14 +6542,19 @@ public final class R {
     public static final int w04d=0x7f07009e;
     public static final int w04n=0x7f07009f;
     public static final int w09d=0x7f0700a0;
-    public static final int w10d=0x7f0700a1;
-    public static final int w11d=0x7f0700a2;
-    public static final int w13d=0x7f0700a3;
-    public static final int w50d=0x7f0700a4;
-    public static final int weather=0x7f0700a5;
-    public static final int weatherforecast=0x7f0700a6;
-    public static final int wind=0x7f0700a7;
-    public static final int xamarin_logo=0x7f0700a8;
+    public static final int w09n=0x7f0700a1;
+    public static final int w10d=0x7f0700a2;
+    public static final int w10n=0x7f0700a3;
+    public static final int w11d=0x7f0700a4;
+    public static final int w11n=0x7f0700a5;
+    public static final int w13d=0x7f0700a6;
+    public static final int w13n=0x7f0700a7;
+    public static final int w50d=0x7f0700a8;
+    public static final int w50n=0x7f0700a9;
+    public static final int weather=0x7f0700aa;
+    public static final int weatherforecast=0x7f0700ab;
+    public static final int wind=0x7f0700ac;
+    public static final int xamarin_logo=0x7f0700ad;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

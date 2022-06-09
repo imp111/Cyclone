@@ -7,69 +7,69 @@
     <ContentPage.Content>
 
         <StackLayout>
+            
             <Grid ColumnDefinitions="*" RowDefinitions="152.5, 152.5, 152.5, 152.5" Grid.Row="1" HeightRequest="200" ColumnSpacing="0" RowSpacing="0">
 
-                <Grid BackgroundColor="#2196F3" Opacity="0.4">
-                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label x:Name ="firstDay" Text="" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
-                        <Label x:Name="firstDayDate" Margin="0, -5, 0, 0" Text="" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
-                        <Image x:Name="firstDayImg" Source="" Margin="0.20" WidthRequest="50" HeightRequest="30" />
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5">
-                            <Label x:Name="firstDayTemperature" Text="" TextColor="White" FontSize="25" ></Label>
-                            <Label x:Name="firstDayTemperatureUnit"  Text="" TextColor="White" FontSize="25" ></Label>
+                <Grid BackgroundColor="#2196F3" Opacity="0.9">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                            <Label x:Name ="firstDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand"/>
+                            <Label x:Name="firstDayDate" Margin="0, -5, 0, 0" Text="" TextColor="White" FontSize="20" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Image x:Name="firstDayImg" Source="" Margin="0.20" WidthRequest="130" HeightRequest="100" />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5" VerticalOptions="CenterAndExpand">
+                            <Label x:Name="firstDayTemperature" Text="" TextColor="White" FontSize="35" ></Label>
+                            <Label x:Name="firstDayTemperatureUnit"  Text="" TextColor="White" FontSize="35" ></Label>
                         </StackLayout>
                     </StackLayout>
                 </Grid>
 
-                <Grid BackgroundColor="#2196F3" Opacity="0.5" Grid.Row="1">
-                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label x:Name="secondDay" Text="" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
-                        <Label x:Name="secondDayDate" Margin="0, -5, 0, 0" Text="Date" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
-                        <Image x:Name="secondDayImg" Source="" Margin="0.20" WidthRequest="50" HeightRequest="30" />
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5">
-                            <Label x:Name="secondDayTemperature" Text="" TextColor="White" FontSize="25" ></Label>
-                            <Label x:Name="secondDayTemperatureUnit" Text="" TextColor="White" FontSize="25" ></Label>
+                <Grid BackgroundColor="#2196F3" Opacity="0.8" Grid.Row="1">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                            <Label x:Name ="secondDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand"/>
+                            <Label x:Name="secondDayDate" Margin="0, -5, 0, 0" Text="" TextColor="White" FontSize="20" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Image x:Name="secondDayImg" Source="" Margin="0.20" WidthRequest="130" HeightRequest="100" />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5" VerticalOptions="CenterAndExpand">
+                            <Label x:Name="secondDayTemperature" Text="" TextColor="White" FontSize="35" ></Label>
+                            <Label x:Name="secondDayTemperatureUnit"  Text="" TextColor="White" FontSize="35" ></Label>
                         </StackLayout>
                     </StackLayout>
                 </Grid>
 
-                <Grid BackgroundColor="#2196F3" Opacity="0.6" Grid.Row="2">
-                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label x:Name="thirdDay" Text="" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
-                        <Label x:Name="thirdDayDate" Margin="0, -5, 0, 0" Text="Date" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
-                        <Image x:Name="thirdDayImg" Source="" Margin="0.20" WidthRequest="50" HeightRequest="30" />
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5">
-                            <Label x:Name="thirdDayTemperature" Text="" TextColor="White" FontSize="25" ></Label>
-                            <Label x:Name="thirdDayTemperatureUnit" Text="" TextColor="White" FontSize="25" ></Label>
+                <Grid BackgroundColor="#2196F3" Opacity="0.7" Grid.Row="2">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                            <Label x:Name ="thirdDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand"/>
+                            <Label x:Name="thirdDayDate" Margin="0, -5, 0, 0" Text="" TextColor="White" FontSize="20" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Image x:Name="thirdDayImg" Source="" Margin="0.20" WidthRequest="130" HeightRequest="100" />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5" VerticalOptions="CenterAndExpand">
+                            <Label x:Name="thirdDayTemperature" Text="" TextColor="White" FontSize="35" ></Label>
+                            <Label x:Name="thirdDayTemperatureUnit"  Text="" TextColor="White" FontSize="35" ></Label>
                         </StackLayout>
                     </StackLayout>
                 </Grid>
 
-                <Grid BackgroundColor="#2196F3" Opacity="0.7" Grid.Row="3">
-                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label x:Name="fourthDay" Text="" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
-                        <Label x:Name="fourthDayDate" Text="" Margin="0, -5, 0, 0"  TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
-                        <Image x:Name="fourthDayImg" Source="" Margin="0.20" WidthRequest="50" HeightRequest="30" />
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5">
-                            <Label x:Name="fourthDayTemperature" Text="" TextColor="White" FontSize="25" ></Label>
-                            <Label x:Name="fourthDayTemperatureUnit" Text="" TextColor="White" FontSize="25" ></Label>
+                <Grid BackgroundColor="#2196F3" Opacity="0.6" Grid.Row="3">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                            <Label x:Name ="fourthDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand"/>
+                            <Label x:Name="fourthDayDate" Margin="0, -5, 0, 0" Text="" TextColor="White" FontSize="20" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Image x:Name="fourthDayImg" Source="" Margin="0.20" WidthRequest="130" HeightRequest="100" />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5" VerticalOptions="CenterAndExpand">
+                            <Label x:Name="fourthDayTemperature" Text="" TextColor="White" FontSize="35" ></Label>
+                            <Label x:Name="fourthDayTemperatureUnit"  Text="" TextColor="White" FontSize="35" ></Label>
                         </StackLayout>
                     </StackLayout>
                 </Grid>
                 
-                <!--
-                <Grid BackgroundColor="#383A44" Opacity="0.8" Grid.Row="4">
-                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label x:Name="fifthDay" Text="" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
-                        <Label x:Name="fifthDayDate" Margin="0, -5, 0, 0" Text="Date" TextColor="White" FontSize="10" HorizontalOptions="CenterAndExpand" />
-                        <Image x:Name="fifthDayImg" Source="" Margin="0.20" WidthRequest="50" HeightRequest="30" />
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0.5">
-                            <Label x:Name="fifthDayTemperature" Text="" TextColor="White" FontSize="25" ></Label>
-                            <Label x:Name="fifthDayTemperatureUnit" Text="" TextColor="White" FontSize="25" ></Label>
-                        </StackLayout>
-                    </StackLayout>
-                </Grid> -->
             </Grid>
+            
         </StackLayout>
+        
     </ContentPage.Content>
+    
 </ContentPage>

@@ -11839,28 +11839,43 @@ namespace Cyclone.Droid
 			public const int w09d = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int w10d = 2131165345;
+			public const int w09n = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int w11d = 2131165346;
+			public const int w10d = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int w13d = 2131165347;
+			public const int w10n = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int w50d = 2131165348;
+			public const int w11d = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int weather = 2131165349;
+			public const int w11n = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int weatherForecast = 2131165350;
+			public const int w13d = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int wind = 2131165351;
+			public const int w13n = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int xamarin_logo = 2131165352;
+			public const int w50d = 2131165352;
+			
+			// aapt resource value: 0x7F0700A9
+			public const int w50n = 2131165353;
+			
+			// aapt resource value: 0x7F0700AA
+			public const int weather = 2131165354;
+			
+			// aapt resource value: 0x7F0700AB
+			public const int weatherForecast = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int wind = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int xamarin_logo = 2131165357;
 			
 			static Drawable()
 			{
