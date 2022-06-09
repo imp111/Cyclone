@@ -8,7 +8,7 @@ namespace Cyclone.ViewModels
     {
         public ForecastViewModel()
         {
-            Title = "Forecast";
+            ForecastTitle = "Forecast";
         }
     }
 }

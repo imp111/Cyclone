@@ -26,6 +26,13 @@ namespace Cyclone.ViewModels
             set { SetProperty(ref title, value); }
         }
 
+        string forecastTitle = string.Empty;
+        public string ForecastTitle
+        {
+            get { return forecastTitle; }
+            set { SetProperty(ref forecastTitle, value); }
+        }
+
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",
             Action onChanged = null)
