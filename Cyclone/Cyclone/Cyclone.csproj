@@ -15,6 +15,9 @@
     <Compile Update="Views\CurrentWeatherPage.xaml.cs">
       <DependentUpon>CurrentWeatherPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Forecast.xaml.cs">
+      <DependentUpon>Forecast.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

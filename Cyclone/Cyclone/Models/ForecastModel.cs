@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Cyclone.Models
 {
-    public class Forecast
+    public class ForecastInfo
     {
         public string cod { get; set; }
         public int message { get; set; }
         public int cnt { get; set; }
-        public List[] list { get; set; }
+        public ForecastProperties[] list { get; set; }
         public City city { get; set; }
     }
 
@@ -25,7 +25,7 @@ namespace Cyclone.Models
         public int sunset { get; set; }
     }
 
-    public class List
+    public class ForecastProperties
     {
         public int dt { get; set; }
         public Main main { get; set; }

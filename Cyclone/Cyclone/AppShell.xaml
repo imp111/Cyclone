@@ -34,6 +34,7 @@
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="White"></Setter>
             </Style>
+            
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
@@ -90,7 +91,7 @@
     </FlyoutItem>
 
     <FlyoutItem Title="Forecast" Icon="weatherForecast.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:Forecast}" />
+        <ShellContent Route="Forecast" ContentTemplate="{DataTemplate local:Forecast}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Locations" Icon="location.png">

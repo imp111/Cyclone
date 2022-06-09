@@ -9,10 +9,7 @@ namespace Cyclone.ViewModels
     {
         public CurrentLocationViewModel()
         {
-            Title = "Current Location";
-            //OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart")); // provides the link when button is clicked
+            Title = "Weather";
         }
-
-        //public ICommand OpenWebCommand { get; } // used for the button, when clicked it opens the link above
     }
 }
