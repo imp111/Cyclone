@@ -22,8 +22,8 @@ namespace Cyclone.Views
         public async void ForecastPrediction()
         {
             CurrentWeatherPage a = new CurrentWeatherPage();
-            //var url = $"https://api.openweathermap.org/data/2.5/forecast?q={a.Location}&appid={a.ApiKey}&units={a.Unit}";
-            var url = $"https://api.openweathermap.org/data/2.5/forecast/daily?q={a.Location}&units={a.Unit}&cnt={a.Count}&appid={a.ApiKey}";
+            var url = $"https://api.openweathermap.org/data/2.5/forecast?q={a.Location}&appid={a.ApiKey}&units={a.Unit}";
+            //var url = $"https://api.openweathermap.org/data/2.5/forecast/daily?q={a.Location}&units={a.Unit}&cnt={a.Count}&appid={a.ApiKey}";
             var result = await ApiObj.Get(url);
 
             if (result.Success)
@@ -50,6 +50,12 @@ namespace Cyclone.Views
                         thirdDayTemperatureUnit.Text = $"°C";
                         fourthDayTemperatureUnit.Text = $"°C";
                         fifthDayTemperatureUnit.Text = $"°C";
+                        sixthDayTemperatureUnit.Text = $"°C";
+                        seventhDayTemperatureUnit.Text = $"°C";
+                        eightDayTemperatureUnit.Text = $"°C";
+                        ninthDayTemperatureUnit.Text = $"°C";
+                        tenthDayTemperatureUnit.Text = $"°C";
+                        eleventhDayTemperatureUnit.Text = $"°C";
                     }
                     else if (a.Unit == "imperial")
                     {
@@ -58,6 +64,12 @@ namespace Cyclone.Views
                         thirdDayTemperatureUnit.Text = $"°F";
                         fourthDayTemperatureUnit.Text = $"°F";
                         fifthDayTemperatureUnit.Text = $"°F";
+                        sixthDayTemperatureUnit.Text = $"°F";
+                        seventhDayTemperatureUnit.Text = $"°F";
+                        eightDayTemperatureUnit.Text = $"°F";
+                        ninthDayTemperatureUnit.Text = $"°F";
+                        tenthDayTemperatureUnit.Text = $"°F";
+                        eleventhDayTemperatureUnit.Text = $"°F";
                     }
 
                     firstDay.Text = DateTime.Parse(items[0].dt_txt).ToString("dddd");

@@ -26,11 +26,11 @@ namespace Cyclone.ViewModels
             set { SetProperty(ref title, value); }
         }
 
-        string forecastTitle = string.Empty;
-        public string ForecastTitle
+        string bgSource = string.Empty;
+        public string BgSource
         {
-            get { return forecastTitle; }
-            set { SetProperty(ref forecastTitle, value); }
+            get { return bgSource; }
+            set { SetProperty(ref bgSource, value); }
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,

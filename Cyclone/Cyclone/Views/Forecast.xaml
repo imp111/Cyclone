@@ -12,8 +12,8 @@
             <ScrollView VerticalScrollBarVisibility="Default">
                 
                 <Grid ColumnDefinitions="*" RowDefinitions="*, *, *, *, *, *, *, *, *, *, *" RowSpacing="2">
-                    <Grid BackgroundColor="#239DFF" Opacity="0.95" Grid.Row="0" Grid.Column="0">
-
+                    
+                    <Grid BackgroundColor="Transparent" Opacity="0.95" Grid.Row="0" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="firstDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -27,7 +27,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.9" Grid.Row="1" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.9" Grid.Row="1" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="secondDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -41,7 +41,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.85" Grid.Row="2" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.85" Grid.Row="2" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="thirdDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -55,7 +55,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.8" Grid.Row="3" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.8" Grid.Row="3" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="fourthDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -69,7 +69,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.75" Grid.Row="4" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.75" Grid.Row="4" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="fifthDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -83,7 +83,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.7" Grid.Row="5" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.7" Grid.Row="5" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="sixthDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -97,7 +97,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.65" Grid.Row="6" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.65" Grid.Row="6" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="seventhDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -111,7 +111,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.6" Grid.Row="7" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.6" Grid.Row="7" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="eightDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -125,7 +125,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.55" Grid.Row="8" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.55" Grid.Row="8" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="ninthDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -139,7 +139,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.5" Grid.Row="9" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.5" Grid.Row="9" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="tenthDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />
@@ -153,7 +153,7 @@
                         </StackLayout>
                     </Grid>
 
-                    <Grid BackgroundColor="#239DFF" Opacity="0.45" Grid.Row="10" Grid.Column="0">
+                    <Grid BackgroundColor="Transparent" Opacity="0.45" Grid.Row="10" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <Label x:Name ="eleventhDay" Text="" TextColor="White" FontSize="30" HorizontalOptions="CenterAndExpand" />

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cyclone.Views.CurrentWeatherPage"
              xmlns:vm="clr-namespace:Cyclone.ViewModels"
+             BackgroundImageSource="{Binding BgSource}"
              Title="{Binding Title}">
 
     <ContentPage.BindingContext>
@@ -31,10 +32,12 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
+            <!--
             <BoxView Grid.RowSpan="2" BackgroundColor="#383A44" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></BoxView>
             <Image x:Name="backgroundImage" Aspect="AspectFill" Grid.RowSpan="2" Source="bgLondon.jpg" Opacity="0.5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
+            -->
             <Image Aspect="AspectFill" Grid.RowSpan="2" Source="bgDimm.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
-
+ 
             <Grid Grid.Row="1">
 
                 <StackLayout Spacing="20">
