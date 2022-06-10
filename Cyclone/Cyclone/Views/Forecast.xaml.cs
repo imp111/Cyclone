@@ -22,8 +22,8 @@ namespace Cyclone.Views
         public async void ForecastPrediction()
         {
             CurrentWeatherPage a = new CurrentWeatherPage();
-            var url = $"https://api.openweathermap.org/data/2.5/forecast?q={a.Location}&appid={a.ApiKey}&units={a.Unit}";
-            //var url = $"https://api.openweathermap.org/data/2.5/forecast/daily?q={a.Location}&cnt={a.Count}&appid={a.ApiKey}&units={a.Unit}";
+            //var url = $"https://api.openweathermap.org/data/2.5/forecast?q={a.Location}&appid={a.ApiKey}&units={a.Unit}";
+            var url = $"https://api.openweathermap.org/data/2.5/forecast/daily?q={a.Location}&units={a.Unit}&cnt={a.Count}&appid={a.ApiKey}";
             var result = await ApiObj.Get(url);
 
             if (result.Success)
