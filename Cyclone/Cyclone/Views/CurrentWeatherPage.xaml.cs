@@ -18,6 +18,7 @@ namespace Cyclone.Views
         internal string Location = "Stara Zagora";
         internal string ApiKey = "0668feb2839853a4357b33fa849d4cc5";
         internal string Unit = "metric"; //imperial and metric
+        internal int Count = 11; // number of days to be returned by the api
 
         private async void ApiWeatherResponse()
         {

@@ -23,6 +23,7 @@ namespace Cyclone.Views
         {
             CurrentWeatherPage a = new CurrentWeatherPage();
             var url = $"https://api.openweathermap.org/data/2.5/forecast?q={a.Location}&appid={a.ApiKey}&units={a.Unit}";
+            //var url = $"https://api.openweathermap.org/data/2.5/forecast/daily?q={a.Location}&cnt={a.Count}&appid={a.ApiKey}&units={a.Unit}";
             var result = await ApiObj.Get(url);
 
             if (result.Success)
@@ -41,13 +42,14 @@ namespace Cyclone.Views
                             items.Add(item);
                         }
                     }
-                    
+
                     if (a.Unit == "metric")
                     {
                         firstDayTemperatureUnit.Text = $"°C";
                         secondDayTemperatureUnit.Text = $"°C";
                         thirdDayTemperatureUnit.Text = $"°C";
                         fourthDayTemperatureUnit.Text = $"°C";
+                        fifthDayTemperatureUnit.Text = $"°C";
                     }
                     else if (a.Unit == "imperial")
                     {
@@ -55,6 +57,7 @@ namespace Cyclone.Views
                         secondDayTemperatureUnit.Text = $"°F";
                         thirdDayTemperatureUnit.Text = $"°F";
                         fourthDayTemperatureUnit.Text = $"°F";
+                        fifthDayTemperatureUnit.Text = $"°F";
                     }
 
                     firstDay.Text = DateTime.Parse(items[0].dt_txt).ToString("dddd");
@@ -75,7 +78,42 @@ namespace Cyclone.Views
                     fourthDay.Text = DateTime.Parse(items[3].dt_txt).ToString("dddd");
                     fourthDayDate.Text = DateTime.Parse(items[3].dt_txt).ToString("dd/MM/yyyy");
                     fourthDayTemperature.Text = Math.Round(items[3].main.temp_max).ToString();
-                    fourthDayImg.Source = $"w{items[3].weather[0].icon}.png"; 
+                    fourthDayImg.Source = $"w{items[3].weather[0].icon}.png";
+
+                    fifthDay.Text = DateTime.Parse(items[4].dt_txt).ToString("dddd");
+                    fifthDayDate.Text = DateTime.Parse(items[4].dt_txt).ToString("dd/MM/yyyy");
+                    fifthDayTemperature.Text = Math.Round(items[4].main.temp_max).ToString();
+                    fifthDayImg.Source = $"w{items[4].weather[0].icon}.png";
+
+                    sixthDay.Text = DateTime.Parse(items[5].dt_txt).ToString("dddd");
+                    sixthDayDate.Text = DateTime.Parse(items[5].dt_txt).ToString("dd/MM/yyyy");
+                    sixthDayTemperature.Text = Math.Round(items[5].main.temp_max).ToString();
+                    sixthDayImg.Source = $"w{items[5].weather[0].icon}.png";
+
+                    seventhDay.Text = DateTime.Parse(items[6].dt_txt).ToString("dddd");
+                    seventhDayDate.Text = DateTime.Parse(items[6].dt_txt).ToString("dd/MM/yyyy");
+                    seventhDayTemperature.Text = Math.Round(items[6].main.temp_max).ToString();
+                    seventhDayImg.Source = $"w{items[6].weather[0].icon}.png";
+
+                    eightDay.Text = DateTime.Parse(items[7].dt_txt).ToString("dddd");
+                    eightDayDate.Text = DateTime.Parse(items[7].dt_txt).ToString("dd/MM/yyyy");
+                    eightDayTemperature.Text = Math.Round(items[7].main.temp_max).ToString();
+                    eightDayImg.Source = $"w{items[7].weather[0].icon}.png";
+
+                    ninthDay.Text = DateTime.Parse(items[8].dt_txt).ToString("dddd");
+                    ninthDayDate.Text = DateTime.Parse(items[8].dt_txt).ToString("dd/MM/yyyy");
+                    ninthDayTemperature.Text = Math.Round(items[8].main.temp_max).ToString();
+                    ninthDayImg.Source = $"w{items[8].weather[0].icon}.png";
+
+                    tenthDay.Text = DateTime.Parse(items[9].dt_txt).ToString("dddd");
+                    tenthDayDate.Text = DateTime.Parse(items[9].dt_txt).ToString("dd/MM/yyyy");
+                    tenthDayTemperature.Text = Math.Round(items[9].main.temp_max).ToString();
+                    tenthDayImg.Source = $"w{items[9].weather[0].icon}.png";
+
+                    eleventhDay.Text = DateTime.Parse(items[10].dt_txt).ToString("dddd");
+                    eleventhDayDate.Text = DateTime.Parse(items[10].dt_txt).ToString("dd/MM/yyyy");
+                    eleventhDayTemperature.Text = Math.Round(items[10].main.temp_max).ToString();
+                    eleventhDayImg.Source = $"w{items[10].weather[0].icon}.png";
                 }
                 catch (Exception)
                 {
