@@ -41,7 +41,7 @@ namespace Cyclone.Views
                             items.Add(item);
                         }
                     }
-
+                    
                     if (a.Unit == "metric")
                     {
                         firstDayTemperatureUnit.Text = $"°C";
@@ -75,7 +75,7 @@ namespace Cyclone.Views
                     fourthDay.Text = DateTime.Parse(items[3].dt_txt).ToString("dddd");
                     fourthDayDate.Text = DateTime.Parse(items[3].dt_txt).ToString("dd/MM/yyyy");
                     fourthDayTemperature.Text = Math.Round(items[3].main.temp_max).ToString();
-                    fourthDayImg.Source = $"w{items[3].weather[0].icon}.png";
+                    fourthDayImg.Source = $"w{items[3].weather[0].icon}.png"; 
                 }
                 catch (Exception)
                 {
