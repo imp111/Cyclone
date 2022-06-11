@@ -35,8 +35,8 @@ namespace Cyclone.Views
                     weatherLocation.Text = $"{Location}, {weatherInfo.sys.country.ToUpper()}";
                     weatherConditionImage.Source = $"w{weatherInfo.weather[0].icon}";
 
-                    var date = new DateTime().ToUniversalTime().AddSeconds(weatherInfo.dt);
-
+                    //var date = new DateTime().ToUniversalTime().AddSeconds(weatherInfo.dt);
+                    var date = DateTime.Now;
                     weatherDate.Text = date.ToString("dddd, dd/MM/yyyy").ToUpper();
                     weatherTemperature.Text = $"{Math.Round(weatherInfo.main.temp)}";
 
