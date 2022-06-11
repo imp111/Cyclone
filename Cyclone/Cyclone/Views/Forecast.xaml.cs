@@ -28,9 +28,9 @@ namespace Cyclone.Views
             while (true)
             {
                 bgGradient.Animate(name: "forward", callback: forward, start: 0, end: 1, length: 5000, easing: Easing.SinIn);
-                await Task.Delay(3000);
-                bgGradient.Animate(name: "backward", callback: backward, start: 1, end: 0, length: 5000, easing: Easing.SinIn);
-                await Task.Delay(3000);
+                await Task.Delay(5000);
+                bgGradient.Animate(name: "backward", callback: forward, start: 1, end: 0, length: 5000, easing: Easing.SinIn);
+                await Task.Delay(5000);
             }
         }
 
