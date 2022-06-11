@@ -15,10 +15,10 @@
                     <BoxView x:Name="bgGradient" Scale="12" AnchorX="1" AnchorY="0">
                         <BoxView.Background>
                             <LinearGradientBrush>
-                                <GradientStop Color="#AC6DFF" Offset="0.3"/>
-                                <GradientStop Color="#9D63E8" Offset="0.5"/>
-                                <GradientStop Color="#8D59D1" Offset="0.7"/>
-                                <GradientStop Color="#AC6DFF" Offset="1"/>
+                                <GradientStop Color="#2DED35" Offset="0.3"/>
+                                <GradientStop Color="#141BD1" Offset="0.5"/>
+                                <GradientStop Color="#D12458" Offset="0.7"/>
+                                <GradientStop Color="#EDEA2E" Offset="1"/>
                             </LinearGradientBrush>
                         </BoxView.Background>
                     </BoxView>
