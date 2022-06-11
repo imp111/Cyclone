@@ -2,16 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cyclone.Views.Forecast"
-             BackgroundImageSource="forecastBg.png"
              Title="Forecast">
     
     <ContentPage.Content>
 
         <StackLayout>
-            
+
             <ScrollView VerticalScrollBarVisibility="Default">
-                
+
                 <Grid ColumnDefinitions="*" RowDefinitions="*, *, *, *, *, *, *, *, *, *, *" RowSpacing="2">
+
+                    <BoxView x:Name="bgGradient" Scale="12" AnchorX="1" AnchorY="0">
+                        <BoxView.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#EA3FF7" Offset="0.3"/>
+                                <GradientStop Color="#3282F6" Offset="0.5"/>
+                                <GradientStop Color="#19DBF6" Offset="0.7"/>
+                                <GradientStop Color="#A669F6" Offset="1"/>
+                            </LinearGradientBrush>
+                        </BoxView.Background>
+                    </BoxView>
                     
                     <Grid BackgroundColor="Transparent" Opacity="0.95" Grid.Row="0" Grid.Column="0">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">

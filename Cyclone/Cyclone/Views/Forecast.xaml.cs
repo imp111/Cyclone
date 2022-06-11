@@ -4,7 +4,7 @@ using Cyclone.Views;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,7 +16,22 @@ namespace Cyclone.Views
         public Forecast()
         {
             InitializeComponent();
+            Task.Run(AnimateBackground);
             ForecastPrediction();
+        }
+
+        private async void AnimateBackground()
+        {
+            Action<double> forward = input => bgGradient.AnchorX = input;
+            Action<double> backward = input => bgGradient.AnchorX = input;
+
+            while (true)
+            {
+                bgGradient.Animate(name: "forward", callback: forward, start: 0, end: 1, length: 5000, easing: Easing.SinIn);
+                await Task.Delay(3000);
+                bgGradient.Animate(name: "backward", callback: backward, start: 1, end: 0, length: 5000, easing: Easing.SinIn);
+                await Task.Delay(3000);
+            }
         }
 
         public async void ForecastPrediction()
@@ -97,6 +112,8 @@ namespace Cyclone.Views
                     fifthDayTemperature.Text = Math.Round(items[4].main.temp_max).ToString();
                     fifthDayImg.Source = $"w{items[4].weather[0].icon}.png";
 
+                    /*
+
                     sixthDay.Text = DateTime.Parse(items[5].dt_txt).ToString("dddd");
                     sixthDayDate.Text = DateTime.Parse(items[5].dt_txt).ToString("dd/MM/yyyy");
                     sixthDayTemperature.Text = Math.Round(items[5].main.temp_max).ToString();
@@ -126,6 +143,7 @@ namespace Cyclone.Views
                     eleventhDayDate.Text = DateTime.Parse(items[10].dt_txt).ToString("dd/MM/yyyy");
                     eleventhDayTemperature.Text = Math.Round(items[10].main.temp_max).ToString();
                     eleventhDayImg.Source = $"w{items[10].weather[0].icon}.png";
+                    */
                 }
                 catch (Exception)
                 {
