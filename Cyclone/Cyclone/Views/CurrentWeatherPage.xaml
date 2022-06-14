@@ -59,6 +59,11 @@
                         </StackLayout>
                     </StackLayout>
 
+                    <StackLayout>
+                        <Label x:Name="weatherTime" Text="" TextColor="White" FontSize="17" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                    </StackLayout>
+                    
+
                     <Grid WidthRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 
                         <Grid.ColumnDefinitions>

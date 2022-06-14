@@ -18,7 +18,6 @@ namespace Cyclone.Views
         internal string Location = "Stara Zagora";
         internal string ApiKey = "0668feb2839853a4357b33fa849d4cc5";
         internal string Unit = "metric"; //imperial and metric
-        internal int Count = 11; // number of days to be returned by the api
 
         private async void ApiWeatherResponse()
         {
@@ -35,10 +34,11 @@ namespace Cyclone.Views
                     weatherLocation.Text = $"{Location}, {weatherInfo.sys.country.ToUpper()}";
                     weatherConditionImage.Source = $"w{weatherInfo.weather[0].icon}";
 
-                    //var date = new DateTime().ToUniversalTime().AddSeconds(weatherInfo.dt);
-                    var date = DateTime.Now;
-                    weatherDate.Text = date.ToString("dddd, dd/MM/yyyy").ToUpper();
+                    var date = new DateTime().ToUniversalTime().AddSeconds(weatherInfo.dt);
+                    weatherDate.Text = date.ToString("dddd, dd/MM").ToUpper();
                     weatherTemperature.Text = $"{Math.Round(weatherInfo.main.temp)}";
+
+                    //weatherTime.Text = zone.ToString("HH/mm/ss");
 
                     if (Unit == "metric")
                     {
