@@ -10,7 +10,7 @@ namespace Cyclone.ViewModels
     public class NewItemViewModel : BaseViewModel
     {
         private string text;
-        private string description;
+        //private string description;
 
         public NewItemViewModel()
         {
@@ -22,8 +22,8 @@ namespace Cyclone.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description);
+            return !String.IsNullOrWhiteSpace(text);
+                //&& !String.IsNullOrWhiteSpace(description);
         }
 
         public string Text
@@ -32,11 +32,11 @@ namespace Cyclone.ViewModels
             set => SetProperty(ref text, value);
         }
 
-        public string Description
-        {
-            get => description;
-            set => SetProperty(ref description, value);
-        }
+        //public string Description
+        //{
+        //    get => description;
+        //    set => SetProperty(ref description, value);
+        //}
 
         public Command SaveCommand { get; }
         public Command CancelCommand { get; }
@@ -53,7 +53,7 @@ namespace Cyclone.ViewModels
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
-                Description = Description
+                //Description = Description
             };
 
             await DataStore.AddItemAsync(newItem);

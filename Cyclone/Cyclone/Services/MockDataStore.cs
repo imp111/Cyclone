@@ -8,13 +8,20 @@ namespace Cyclone.Services
 {
     public class MockDataStore : IDataStore<Item>
     {
-        readonly List<Item> items;
+        private readonly List<Item> items;
 
         public MockDataStore()
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." }
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Paris" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Madrid" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "London" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Rome" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "New York" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Tokyo" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Moscow" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Beijing" },
             };
         }
 
