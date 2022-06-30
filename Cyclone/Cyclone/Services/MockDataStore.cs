@@ -14,14 +14,14 @@ namespace Cyclone.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Paris" },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Madrid" },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "London" },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Rome" },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "New York" },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Tokyo" },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Moscow" },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Beijing" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Paris", Unit = "metric"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Madrid", Unit = "metric" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "London", Unit = "metric"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Rome", Unit = "metric"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "New York", Unit = "metric"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Tokyo", Unit = "metric"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Moscow", Unit = "metric"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Beijing", Unit = "metric"},
             };
         }
 
@@ -41,10 +41,10 @@ namespace Cyclone.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> DeleteItemAsync(string id)
+        public async Task<bool> DeleteItemAsync(string text)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
-            items.Remove(oldItem);
+            var enteredItem = items.Where((Item arg) => arg.Text.ToLower() == text.ToLower()).FirstOrDefault();
+            items.Remove(enteredItem);
 
             return await Task.FromResult(true);
         }

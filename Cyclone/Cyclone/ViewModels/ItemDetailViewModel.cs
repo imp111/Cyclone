@@ -11,7 +11,7 @@ namespace Cyclone.ViewModels
     {
         private string itemId;
         private string text;
-        //private string description;
+        private string unit;
         public string Id { get; set; }
 
         public string Text
@@ -20,12 +20,11 @@ namespace Cyclone.ViewModels
             set => SetProperty(ref text, value);
         }
 
-        /*
-        public string Description
+        public string Unit
         {
-            get => description;
-            set => SetProperty(ref description, value);
-        }*/
+            get => unit;
+            set => SetProperty(ref unit, value);
+        }
 
         public string ItemId
         {
@@ -47,7 +46,7 @@ namespace Cyclone.ViewModels
                 var item = await DataStore.GetItemAsync(itemId);
                 Id = item.Id;
                 Text = item.Text;
-                //Description = item.Description;
+                Unit = item.Unit;
             }
             catch (Exception)
             {

@@ -6,11 +6,9 @@
 
     <StackLayout Spacing="20" Padding="15">
         <Label Text="City name:" FontSize="Medium" />
-        <Label Text="{Binding Text}" FontSize="Medium"/>
-        <!--
-        <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Description}" FontSize="Small"/>
-        -->
+        <Label Text="{Binding Text}" FontSize="Medium" />
+        <Label Text="Unit:" FontSize="Medium" />
+        <Label Text="{Binding Unit}" FontSize="Small" />
+        <Button Text="Select" Command="{Binding SelectItemCommand} " />
     </StackLayout>
-    
 </ContentPage>

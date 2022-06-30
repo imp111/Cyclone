@@ -1,29 +1,29 @@
 ﻿using Cyclone.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
+using Cyclone.Views;
+
 using Xamarin.Forms;
 
 namespace Cyclone.ViewModels
 {
-    public class NewItemViewModel : BaseViewModel
+    internal class RemoveItemViewModel : BaseViewModel
     {
         private string text;
         private string unit;
+        public Command RemoveCommand { get; }
+        public Command CancelCommand { get; }
 
-        public NewItemViewModel()
+        public RemoveItemViewModel()
         {
-            SaveCommand = new Command(OnSave, ValidateSave);
+            RemoveCommand = new Command(OnRemove, ValidateRemove);
             CancelCommand = new Command(OnCancel);
             this.PropertyChanged +=
-                (_, __) => SaveCommand.ChangeCanExecute();
+                (_, __) => RemoveCommand.ChangeCanExecute();
         }
 
-        private bool ValidateSave()
+        private bool ValidateRemove()
         {
-            return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(unit);
+            return !String.IsNullOrWhiteSpace(text);
         }
 
         public string Text
@@ -38,16 +38,13 @@ namespace Cyclone.ViewModels
             set => SetProperty(ref unit, value);
         }
 
-        public Command SaveCommand { get; }
-        public Command CancelCommand { get; }
-
         private async void OnCancel()
         {
             // This will pop the current page off the navigation stack
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
         }
 
-        private async void OnSave()
+        private async void OnRemove()
         {
             Item newItem = new Item()
             {
@@ -56,10 +53,10 @@ namespace Cyclone.ViewModels
                 Unit = Unit
             };
 
-            await DataStore.AddItemAsync(newItem);
+            await DataStore.DeleteItemAsync(newItem.Text);
 
             // This will pop the current page off the navigation stack
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
         }
     }
 }

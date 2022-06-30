@@ -15,6 +15,7 @@ namespace Cyclone.ViewModels
         public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
+        public Command RemoveItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
         public ItemsViewModel()
@@ -26,9 +27,11 @@ namespace Cyclone.ViewModels
             ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
+
+            RemoveItemCommand = new Command(OnRemoveItem);
         }
 
-        async Task ExecuteLoadItemsCommand()
+        private async Task ExecuteLoadItemsCommand()
         {
             IsBusy = true;
 
@@ -72,7 +75,12 @@ namespace Cyclone.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(Item item)
+        private async void OnRemoveItem(object obj)
+        {
+            await Shell.Current.GoToAsync(nameof(RemoveItemPage));
+        }
+
+        private async void OnItemSelected(Item item)
         {
             if (item == null)
                 return;

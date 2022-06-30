@@ -34,7 +34,7 @@
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="White"></Setter>
             </Style>
-            
+
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
@@ -96,6 +96,16 @@
 
     <FlyoutItem Title="Locations" Icon="location.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="AddItemPage"
+                      Route="AddItemPage"
+                      ContentTemplate="{DataTemplate local:NewItemPage}" />
+        
+        <ShellContent Title="RemoveItemPage"
+                      Route="RemoveItemPage"
+                      ContentTemplate="{DataTemplate local:RemoveItemPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to
