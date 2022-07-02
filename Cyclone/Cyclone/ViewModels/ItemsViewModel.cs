@@ -16,6 +16,7 @@ namespace Cyclone.ViewModels
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
         public Command RemoveItemCommand { get; }
+        public Command SelectItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
         public ItemsViewModel()
@@ -29,6 +30,8 @@ namespace Cyclone.ViewModels
             AddItemCommand = new Command(OnAddItem);
 
             RemoveItemCommand = new Command(OnRemoveItem);
+
+            SelectItemCommand = new Command(OnSelectItem);
         }
 
         private async Task ExecuteLoadItemsCommand()
@@ -77,7 +80,12 @@ namespace Cyclone.ViewModels
 
         private async void OnRemoveItem(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(RemoveItemPage));
+            await Shell.Current.GoToAsync($"//{nameof(RemoveItemPage)}");
+        }
+
+        private async void OnSelectItem(object obj)
+        {
+            await Shell.Current.GoToAsync($"//{nameof(ItemDetailPage)}");
         }
 
         private async void OnItemSelected(Item item)

@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Cyclone.Views;
 
 namespace Cyclone.ViewModels
 {
@@ -13,6 +14,12 @@ namespace Cyclone.ViewModels
         private string text;
         private string unit;
         public string Id { get; set; }
+        public Command SelectItemCommand { get; }
+
+        public ItemDetailViewModel()
+        {
+            SelectItemCommand = new Command(OnSelect);
+        }
 
         public string Text
         {
@@ -37,6 +44,12 @@ namespace Cyclone.ViewModels
                 itemId = value;
                 LoadItemId(value);
             }
+        }
+
+        public async void OnSelect()
+        {
+            // This will pop the current page off the navigation stack
+            await Shell.Current.GoToAsync($"//{nameof(CurrentWeatherPage)}");
         }
 
         public async void LoadItemId(string itemId)

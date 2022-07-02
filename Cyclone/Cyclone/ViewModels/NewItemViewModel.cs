@@ -11,6 +11,8 @@ namespace Cyclone.ViewModels
     {
         private string text;
         private string unit;
+        public Command SaveCommand { get; }
+        public Command CancelCommand { get; }
 
         public NewItemViewModel()
         {
@@ -37,9 +39,6 @@ namespace Cyclone.ViewModels
             get => unit;
             set => SetProperty(ref unit, value);
         }
-
-        public Command SaveCommand { get; }
-        public Command CancelCommand { get; }
 
         private async void OnCancel()
         {

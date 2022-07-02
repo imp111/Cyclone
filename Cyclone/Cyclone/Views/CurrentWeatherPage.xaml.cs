@@ -4,20 +4,21 @@ using Newtonsoft.Json;
 using Cyclone.Helper;
 using Cyclone.Models;
 using System.Collections.Generic;
+using Cyclone.ViewModels;
 
 namespace Cyclone.Views
 {
     public partial class CurrentWeatherPage : ContentPage
     {
+        internal string ApiKey = "0668feb2839853a4357b33fa849d4cc5";
+        internal string Location = "";
+        internal string Unit = ""; //imperial and metric
+
         public CurrentWeatherPage()
         {
             InitializeComponent();
             ApiWeatherResponse();
         }
-
-        internal string Location = "Stara Zagora";
-        internal string ApiKey = "0668feb2839853a4357b33fa849d4cc5";
-        internal string Unit = "metric"; //imperial and metric
 
         private async void ApiWeatherResponse()
         {

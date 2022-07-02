@@ -1,12 +1,14 @@
 ﻿using Cyclone.Helper;
 using Cyclone.Models;
 using Cyclone.Views;
+using Cyclone.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Cyclone.Services;
 
 namespace Cyclone.Views
 {
@@ -37,8 +39,10 @@ namespace Cyclone.Views
         public async void ForecastPrediction()
         {
             CurrentWeatherPage a = new CurrentWeatherPage();
+
+            //var url = $"https://api.openweathermap.org/data/2.5/forecast?q={a.Location}&appid={a.ApiKey}&units={a.Unit}";
             var url = $"https://api.openweathermap.org/data/2.5/forecast?q={a.Location}&appid={a.ApiKey}&units={a.Unit}";
-            //var url = $"https://api.openweathermap.org/data/2.5/forecast/daily?q={a.Location}&units={a.Unit}&cnt={a.Count}&appid={a.ApiKey}"; not available in free plan
+
             var result = await ApiObj.Get(url);
 
             if (result.Success)

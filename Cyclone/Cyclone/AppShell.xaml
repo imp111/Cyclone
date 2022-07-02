@@ -99,12 +99,7 @@
     </FlyoutItem>
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="AddItemPage"
-                      Route="AddItemPage"
-                      ContentTemplate="{DataTemplate local:NewItemPage}" />
-        
-        <ShellContent Title="RemoveItemPage"
-                      Route="RemoveItemPage"
+        <ShellContent Route="RemoveItemPage"
                       ContentTemplate="{DataTemplate local:RemoveItemPage}" />
     </FlyoutItem>
 
